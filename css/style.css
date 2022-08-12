@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+
+html { 
+  font-size: 62.5%; 
+}
+
+body { 
+  font-size: 1.6rem;
+  font-family: "century schoolbook", arial;
+  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0,0,0,0.60)), url('../img/bcg.jpg') no-repeat;
+  background-color: black;
+  background-size: 100%;
+  overflow: hidden;
+
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 2rem;
+  font-family: 'eurostile-extended-bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 5rem;
+  animation: 1s shake infinite alternate;
+}
+
+.bloodRainer {
+  width: 100%;
+  height: 100vh;
+}
+
+.fa-droplet {
+  color: red;
+  position: absolute;
+  top: -0.2rem;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+  
+  
+h2 {
+  text-align: center;
+  color: white;
+  margin: 2rem;
+  font-family: 'eurostile-extended-bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
+#mainMenu a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  margin: 2rem;
+  border: 0.2rem solid red;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+#mainMenu a:hover {
+  color: red;
+  border: 0.2rem solid white;
+}
+
+.fa-solid{
+margin: 0 1rem 0 0;
+}
+
+main {
+  vertical-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10rem auto auto auto;
+    width: 25rem;
+}
+
+form img {
+    width: 25rem;
+    height: auto;
+    margin: 5rem auto;
+    animation:spin 120s linear infinite;
+
+
+}
+
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); 
+    }
+} 
+
+input {
+    width: 100%;
+    height: 3rem;
+    margin: 1rem 0;
+    padding: 0 4rem;
+}
+
+input:nth-of-type(1) {
+	background-image: url(../img/user.png);
+	background-repeat: no-repeat;
+	background-size: 2rem;
+	background-position: 1rem;
+}
+
+input:nth-of-type(2) {
+	background-image: url(../img/password.png);
+	background-repeat: no-repeat;
+	background-size: 2rem;
+	background-position: 1rem;
+}
+
+.fieldset {
+  padding: 0 5rem 5rem 5rem;
+  position: relative;
+  margin: 0 auto;
+  border: 3px solid white;
+}
+
+.top,
+.bottom,
+.left,
+.right {
+  position: absolute;
+          animation: 120s linear infinite;
+}
+.top {
+  top: -3px;
+  left: -3px;
+  height: 3px;
+          animation-name: top;
+}
+@keyframes top {
+  25% {
+    width: 0;
+    background: red;
+  }
+  38% {
+    width: calc(101%);
+    background: red;
+  }
+  50% {
+    background: red;
+  }
+  62% {
+    background: red;
+  }
+  75% {
+    width: calc(101%);
+    background: red;
+  }
+  88% {
+    left: auto;
+    right: -3px;
+    width: 0;
+    background: red;
+  }
+}
+
+.bottom {
+  bottom: -3px;
+  right: -3px;
+  height: 3px;
+  -webkit-animation-name: bottom;
+          animation-name: bottom;
+}
+
+@keyframes bottom {
+  0% {
+    width: 0;
+  }
+  12% {
+    width: calc(101%);
+    background: red;
+  }
+  25% {
+    background: red;
+  }
+  38% {
+    background: red;
+  }
+  50% {
+    width: calc(101%);
+    background: red;
+  }
+  62% {
+    left: -3px;
+    width: 0;
+    background: red;
+  }
+  75% {
+    background: red;
+  }
+}
+
+.left {
+  bottom: -3px;
+  left: -3px;
+  width: 3px;
+          animation-name: left;
+}
+@keyframes left {
+  12% {
+    height: 0;
+    background: red;
+  }
+  25% {
+    height: calc(101%);
+    background: red;
+  }
+  38% {
+    background: red;
+  }
+  50% {
+    background: red;
+  }
+  62% {
+    height: calc(101%);
+    background: red;
+  }
+  75% {
+    top: -3px;
+    height: 0;
+    background: red;
+  }
+  88% {
+    background: red;
+  }
+}
+
+.right {
+  top: -3px;
+  right: -3px;
+  width: 3px;
+          animation-name: right;
+}
+@keyframes right {
+  38% {
+    height: 0;
+    background: red;
+  }
+  50% {
+    height: calc(101%);
+    background: red;
+  }
+  62% {
+    background: red;
+  }
+  75% {
+    background: red;
+  }
+  88% {
+    height: calc(101%);
+    background: red;
+  }
+  100% {
+    top: auto;
+    bottom: -3px;
+    height: 0;
+    background: red;
+  }
+}
+
+footer {
+  padding: 5rem;
+}
+
+footer p {
+  font-family: 'eurostile-extended-bold', sans-serif; ;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 1.5rem;
+}
